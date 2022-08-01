@@ -24,12 +24,14 @@ const renderBooks = (books, filter) => {
     3: "non-fiction",
   };
   console.log(allBooks);
-  if (filter !== 0) {
+// eslint-disable-next-line
+  if (filter != 0) {
     allBooks = allBooks.filter((book) => {
       return book.genre === genre[filter];
     });
   }
   return allBooks.map((book) => {
+	  console.log(book);
     return <MyCard imgUrl={book.imgUrl} />;
   });
 };

@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Store from "./Store";
 import NavBar from "./Components/NavBar";
 import Contact from "./Contact";
+import Home from './Home';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const books = {
   bestSelling: [
@@ -76,7 +77,7 @@ root.render(
   <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path="/" element={<App books={books} />} />
+      <Route path="/" element={<Home books={books} />} />
       <Route path="store" element={<Store books={books} />} />
       <Route path="contact" element={<Contact />} />
     </Routes>
